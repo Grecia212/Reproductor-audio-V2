@@ -7,27 +7,46 @@
   <style>
     html, body {
       margin: 0;
-      height: 100vh;
+      padding: 0;
+      height: 100%;
       overflow: hidden;
-    }
-    body {
+      font-family: sans-serif;
       background-color: #fff;
+    }
+
+    body {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding-top: 40px;
     }
-    audio {
+
+    .wrapper {
+      margin-top: 40px;
       width: 90%;
       max-width: 600px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      .wrapper {
+        margin-top: 20px;
+        width: 95%;
+        padding: 5px;
+      }
     }
   </style>
 </head>
 <body>
-  <audio controls>
-    <source src="your-song.mp3" type="audio/mpeg">
-    Tu navegador no soporta el elemento de audio.
-  </audio>
+  <div class="wrapper">
+    <audio controls>
+      <source src="your-song.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
 </body>
 </html>
-
